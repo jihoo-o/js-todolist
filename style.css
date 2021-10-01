@@ -1,0 +1,140 @@
+:root {
+    --color-mint: rgb(81, 227, 165);
+    --color-mint-dark: rgba(70, 190, 139);
+    --base-padding: 50px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(240, 239, 232);
+}
+
+/* frame */
+.frame {
+    display: grid;
+    grid-template-rows: 50px auto 50px;
+    width: 370px;
+    height: 550px;
+    padding: var(--base-padding);
+    background-color: white;
+}
+
+/* calendar */
+#calendar {
+    display: grid;
+    grid-template-columns: 50px auto 70px;
+    grid-template-rows: 20px 20px;
+    grid-template-areas:
+        'date month day'
+        'date  year day';
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+}
+.calendar__date {
+    grid-area: date;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+.calendar__month {
+    grid-area: month;
+    padding-top: 7px;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+.calendar__year {
+    grid-area: year;
+    padding-bottom: 3px;
+    font-size: 0.8rem;
+    font-weight: 200;
+}
+.calendar__day {
+    grid-area: day;
+    justify-self: center;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+/* list */
+#list {
+    margin: 0 calc(var(--base-padding) * -1);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    overflow-y: scroll;
+}
+#list::-webkit-scrollbar {
+    display: none;
+}
+.list__item {
+    list-style-type: none;
+    padding: 0 var(--base-padding);
+    margin: 0;
+}
+.list__item-box {
+    display: flex;
+    padding: 5px;
+}
+.list__item__text {
+    margin-right: auto;
+    font-size: 1rem;
+}
+.list__item__text.checked {
+    opacity: 0.3;
+}
+.list__item-box button {
+    border: none;
+    background-color: transparent;
+    opacity: 0.1;
+    font-size: x-large;
+}
+.list__item-box button:hover {
+    cursor: pointer;
+}
+.list__item__btn-check:hover,
+.list__item__btn-check.checked {
+    color: var(--color-mint);
+    opacity: 1;
+}
+.list__item__btn-delete:hover {
+    color: rgb(230, 92, 68);
+    opacity: 1;
+}
+
+/* input */
+#input {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+.input__text {
+    height: 30px;
+    padding: 5px;
+    border: 1px solid rgb(232, 162, 54);
+    border-radius: 5px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 0.8rem;
+}
+.input__btn {
+    position: absolute;
+    top: 50px;
+    align-self: center;
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 50%;
+    color: var(--color-mint-dark);
+    background-color: var(--color-mint);
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+.input__btn:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}

@@ -5,9 +5,26 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>todo list</title>
+        <script
+            src="https://kit.fontawesome.com/8ce431f44f.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <section id="frame">
+        <div class="frame">
             <!-- calendar -->
             <section id="calendar">
                 <div class="calendar__date">12</div>
@@ -19,37 +36,93 @@
             <section id="list">
                 <ul class="list__item">
                     <li class="list__item-box">
-                        <h3 class="list__item__content">Eat breakfast</h3>
-                        <button class="list__item__btn-check">+</button>
-                        <button class="list__item__btn-delete">-</button>
+                        <h3 class="list__item__text checked">Eat breakfast</h3>
+                        <button class="list__item__btn-check checked">
+                            <i class="far fa-check-circle"></i>
+                        </button>
+                        <button class="list__item__btn-delete">
+                            <i class="far fa-trash-alt"></i>
+                        </button>
                     </li>
                     <li class="list__item-box">
-                        <h3 class="list__item__content">Eat breakfast</h3>
-                        <button class="list__item__btn-check">+</button>
-                        <button class="list__item__btn-delete">-</button>
+                        <h3 class="list__item__text checked">Eat breakfast</h3>
+                        <button class="list__item__btn-check checked">
+                            <i class="far fa-check-circle"></i>
+                        </button>
+                        <button class="list__item__btn-delete">
+                            <i class="far fa-trash-alt"></i>
+                        </button>
                     </li>
                     <li class="list__item-box">
-                        <h3 class="list__item__content">Eat breakfast</h3>
-                        <button class="list__item__btn-check">+</button>
-                        <button class="list__item__btn-delete">-</button>
+                        <h3 class="list__item__text">Eat breakfast</h3>
+                        <button class="list__item__btn-check">
+                            <i class="far fa-check-circle"></i>
+                        </button>
+                        <button class="list__item__btn-delete">
+                            <i class="far fa-trash-alt"></i>
+                        </button>
                     </li>
                     <li class="list__item-box">
-                        <h3 class="list__item__content">Eat breakfast</h3>
-                        <button class="list__item__btn-check">+</button>
-                        <button class="list__item__btn-delete">-</button>
+                        <h3 class="list__item__text">Eat breakfast</h3>
+                        <button class="list__item__btn-check">
+                            <i class="far fa-check-circle"></i>
+                        </button>
+                        <button class="list__item__btn-delete">
+                            <i class="far fa-trash-alt"></i>
+                        </button>
                     </li>
                     <li class="list__item-box">
-                        <h3 class="list__item__content">Eat breakfast</h3>
-                        <button class="list__item__btn-check">+</button>
-                        <button class="list__item__btn-delete">-</button>
+                        <h3 class="list__item__text">Eat breakfast</h3>
+                        <button class="list__item__btn-check">
+                            <i class="far fa-check-circle"></i>
+                        </button>
+                        <button class="list__item__btn-delete">
+                            <i class="far fa-trash-alt"></i>
+                        </button>
+                    </li>
+                    <li class="list__item-box">
+                        <h3 class="list__item__text">Eat breakfast</h3>
+                        <button class="list__item__btn-check">
+                            <i class="far fa-check-circle"></i>
+                        </button>
+                        <button class="list__item__btn-delete">
+                            <i class="far fa-trash-alt"></i>
+                        </button>
+                    </li>
+                    <li class="list__item-box">
+                        <h3 class="list__item__text">Eat breakfast</h3>
+                        <button class="list__item__btn-check">
+                            <i class="far fa-check-circle"></i>
+                        </button>
+                        <button class="list__item__btn-delete">
+                            <i class="far fa-trash-alt"></i>
+                        </button>
+                    </li>
+                    <li class="list__item-box">
+                        <h3 class="list__item__text">Eat breakfast</h3>
+                        <button class="list__item__btn-check">
+                            <i class="far fa-check-circle"></i>
+                        </button>
+                        <button class="list__item__btn-delete">
+                            <i class="far fa-trash-alt"></i>
+                        </button>
+                    </li>
+                    <li class="list__item-box">
+                        <h3 class="list__item__text">Eat breakfast</h3>
+                        <button class="list__item__btn-check">
+                            <i class="far fa-check-circle"></i>
+                        </button>
+                        <button class="list__item__btn-delete">
+                            <i class="far fa-trash-alt"></i>
+                        </button>
                     </li>
                 </ul>
             </section>
             <!-- input -->
             <section id="input">
                 <input type="text" class="input__text" required />
-                <button class="input__btn">+</button>
+                <button class="input__btn"><i class="fas fa-plus"></i></button>
             </section>
-        </section>
+        </div>
     </body>
 </html>
