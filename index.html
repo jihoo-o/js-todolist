@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>todo list</title>
+        <script defer src="js/todo.js"></script>
         <script
             src="https://kit.fontawesome.com/8ce431f44f.js"
             crossorigin="anonymous"
@@ -120,8 +121,12 @@
             </section>
             <!-- input -->
             <section id="input">
-                <input type="text" class="input__text" required />
-                <button class="input__btn"><i class="fas fa-plus"></i></button>
+                <form id="input__form">
+                    <input type="text" class="input__text" required />
+                    <button class="input__btn">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </form>
             </section>
         </div>
     </body>

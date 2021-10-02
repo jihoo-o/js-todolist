@@ -88,7 +88,12 @@ body {
     opacity: 0.3;
 }
 .list__item-box button {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    margin-left: 10px;
     border: none;
+    border-radius: 50%;
     background-color: transparent;
     opacity: 0.1;
     font-size: x-large;
@@ -108,10 +113,12 @@ body {
 
 /* input */
 #input {
-    position: sticky;
+    position: relative;
+    padding-top: 10px;
+}
+#input__form {
     display: flex;
     flex-direction: column;
-    padding-top: 10px;
 }
 .input__text {
     height: 30px;
