@@ -7,6 +7,14 @@ const TODO_KEY = 'todolist';
 const UNCHECKED = 'unchecked';
 const CHECKED = 'checked';
 
+function loadTodo() {
+    const parsedTodo = JSON.parse(localStorage.getItem(TODO_KEY));
+    parsedTodo.forEach((todo) => {
+        todoList.push(todo);
+        displayTodo(todo.id, todo.text, todo.state);
+    });
+}
+
 function saveTodo() {
     localStorage.setItem(TODO_KEY, JSON.stringify(todoList));
 }
@@ -45,3 +53,5 @@ inputForm.addEventListener('submit', (e) => {
     inputText.value = '';
     e.preventDefault();
 });
+
+loadTodo();
