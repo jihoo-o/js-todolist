@@ -2,6 +2,14 @@
 
 const inputForm = document.querySelector('#input__form');
 const list = document.querySelector('.list__item');
+const todoList = [];
+const TODO_KEY = 'todolist';
+const UNCHECKED = 'unchecked';
+const CHECKED = 'checked';
+
+function saveTodo() {
+    localStorage.setItem(TODO_KEY, JSON.stringify(todoList));
+}
 
 function displayTodo(id, text, state) {
     const newItem = document.createElement('li');
@@ -22,12 +30,18 @@ function displayTodo(id, text, state) {
 
 function addTodo(text) {
     const id = Date.now() * Math.floor(Math.random() * 100);
-    const UNCHECKED = 'unchecked';
+    todoList.push({
+        id: id,
+        text: text,
+        state: UNCHECKED,
+    });
     displayTodo(id, text, UNCHECKED);
+    saveTodo();
 }
 
 inputForm.addEventListener('submit', (e) => {
     const inputText = document.querySelector('.input__text');
     addTodo(inputText.value);
+    inputText.value = '';
     e.preventDefault();
 });
