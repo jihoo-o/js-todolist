@@ -88,6 +88,7 @@ body {
     opacity: 0.3;
 }
 .list__item-box button {
+    align-self: center;
     width: 24px;
     height: 24px;
     padding: 0;
