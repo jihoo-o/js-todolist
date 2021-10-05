@@ -84,7 +84,7 @@ body {
     margin-right: auto;
     font-size: 1rem;
 }
-.list__item__text.checked {
+.checked .list__item__text {
     opacity: 0.3;
 }
 .list__item-box button {
@@ -103,7 +103,7 @@ body {
     cursor: pointer;
 }
 .list__item__btn-check:hover,
-.list__item__btn-check.checked {
+.checked .list__item__btn-check {
     color: var(--color-mint);
     opacity: 1;
 }
