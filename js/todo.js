@@ -2,7 +2,7 @@
 
 const inputForm = document.querySelector('#input__form');
 const list = document.querySelector('.list__item');
-const todoList = [];
+let todoList = [];
 const TODO_KEY = 'todolist';
 const UNCHECKED = 'unchecked';
 const CHECKED = 'checked';
@@ -63,6 +63,12 @@ function checkTodo(target) {
     target.classList.toggle('checked');
 }
 
+function deleteTodo(target) {
+    const id = Number(target.dataset.id);
+    todoList = todoList.filter((x) => x.id !== id);
+    list.removeChild(target);
+}
+
 inputForm.addEventListener('submit', (e) => {
     const inputText = document.querySelector('.input__text');
     addTodo(inputText.value);
@@ -73,14 +79,18 @@ inputForm.addEventListener('submit', (e) => {
 list.addEventListener('click', (e) => {
     const button = e.target.closest('button');
     const CHECKBTN = 'list__item__btn-check';
+    const DELETEBTN = 'list__item__btn-delete';
     if (!button) {
         return;
     }
     const targetItem = button.closest('.list__item-box');
     if (button.className === CHECKBTN) {
         checkTodo(targetItem);
-        saveTodo();
     }
+    if (button.className === DELETEBTN) {
+        deleteTodo(targetItem);
+    }
+    saveTodo();
 });
 
 loadTodo();
